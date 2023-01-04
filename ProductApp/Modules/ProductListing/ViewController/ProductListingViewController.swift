@@ -108,29 +108,13 @@ extension ProductListingViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         if(self.productCollectionView.contentOffset.y >= (self.productCollectionView.contentSize.height - self.productCollectionView.bounds.size.height)) {
-          //      if !isPageRefreshing {
-          //          isPageRefreshing = true
-//
-//                    print(page)
-//                    page = page + 1
-          //  if viewModel?.nextUrl != nil {
                 let url = viewModel?.nextUrl
                 let urlArr = url?.components(separatedBy: "/")
 
                 let endpoint = urlArr?.last
                 
                 viewModel?.getProducts(endpoint: endpoint ?? "")
-        //    }
-                  //  YourApi(page1: page)
-             //   }
             }
-        
-//            let currentPage = collectionView.contentOffset.y / collectionView.frame.size.width;
-//            if (aryDataSource.count >= yourAPIResponsebatchCount && aryDataSource.count - indexPath.row == 5 && currentPage >= currentPage && isDataLoading) {
-//                currentPage++;
-//                self.fetchMoreData()
-//            }
-//            else { }
     } 
 }
 

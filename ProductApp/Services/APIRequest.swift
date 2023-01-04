@@ -9,11 +9,9 @@ import Foundation
 
 struct APIRequest {
     
-    static var PRODUCT_LIST = "/v1"
     
     private func send<T:BaseResponse>(_ message: BaseRequest?, endpoint:String, method:String, queryItems:[String:String]?, path:[String:String]?, completion: ((Result<T, APIError>) -> Void)?){
         
-        let accessToken = UserDefaults.standard.string(forKey: "ACCESS_TOKEN")
         
         do{
             var ep = endpoint
@@ -26,11 +24,8 @@ struct APIRequest {
             
             var component = URLComponents()
             component.host = "mocki.io" // baseurl
-          //  component.host = "127.0.0.1"
-          //  component.port = 8000
             component.path = ep
             component.scheme = "https"
-          //  component.scheme = "http"
             
             if let qi = queryItems{
                 component.queryItems = []
@@ -47,11 +42,6 @@ struct APIRequest {
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-                //urlRequest.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
-                
-                if let token = accessToken{
-                    urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-                }
                 
                 if let m = message{
                     urlRequest.httpBody = try JSONEncoder().encode(m)

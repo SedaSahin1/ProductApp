@@ -33,11 +33,7 @@ final class HorizontalProductCell: UICollectionViewCell {
         }
     }
     
-    @IBOutlet weak var pageControl: UIPageControl!{
-        didSet{
-       //     pageControl.numberOfPages = products?.count ?? 0
-        }
-    }
+    @IBOutlet weak var pageControl: UIPageControl!
 }
 
 extension HorizontalProductCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
