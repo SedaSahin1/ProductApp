@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HorizontalProductCell" customModule="ProductApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n7E-ms-FBq">
+                    <rect key="frame" x="24" y="12" width="366" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="WLK-Yw-dbC"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UgJ-Cw-AvX">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Nun-JD-4xs"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="Hcd-v7-eO9"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="nAW-2l-df4">
+                    <rect key="frame" x="24" y="216" width="366" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="trg-bn-9QP"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" systemColor="systemRedColor"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="n7E-ms-FBq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="4sq-yE-M1m"/>
+                <constraint firstItem="n7E-ms-FBq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Jx3-tG-5GT"/>
+                <constraint firstItem="nAW-2l-df4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="NpN-Zq-OGP"/>
+                <constraint firstItem="nAW-2l-df4" firstAttribute="top" secondItem="n7E-ms-FBq" secondAttribute="bottom" constant="4" id="bDx-V1-bV3"/>
+                <constraint firstAttribute="trailing" secondItem="nAW-2l-df4" secondAttribute="trailing" constant="24" id="m3o-Sk-PPi"/>
+                <constraint firstAttribute="bottom" secondItem="nAW-2l-df4" secondAttribute="bottom" constant="8" id="mZt-4y-cd6"/>
+                <constraint firstAttribute="trailing" secondItem="n7E-ms-FBq" secondAttribute="trailing" constant="24" id="q0T-vg-JAv"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="horizontalProductCollectionView" destination="n7E-ms-FBq" id="sYh-Pj-bim"/>
+                <outlet property="pageControl" destination="nAW-2l-df4" id="9WX-I9-vYP"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
