@@ -67,6 +67,14 @@ extension HorizontalProductCell: UICollectionViewDelegate, UICollectionViewDataS
         let urlLogo = URL(string:products?[indexPath.row].imageUrl ?? "")
         let data2 = try? Data(contentsOf: urlLogo!)
         cell.productImage.image = UIImage(data: data2!)
+        cell.name.text = products?[indexPath.row].name
+        cell.price.text = "\(String(describing: Int(products?[indexPath.row].price ?? 0.0))) TL"
+        if products?[indexPath.row].countOfPrice ?? 0.0 > 0 {
+            cell.countOfPrices.text = "\(String(describing: Int(products?[indexPath.row].countOfPrice ?? 0.0))) satıcı"
+        }
+        if products?[indexPath.row].followCount ?? 0.0 > 0 {
+            cell.followers.text = "\(String(describing: Int(products?[indexPath.row].followCount ?? 0.0))) takipçi"
+        }
             
         return cell
         

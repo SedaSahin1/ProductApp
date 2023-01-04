@@ -15,13 +15,64 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iqb-9m-K42">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="igJ-pu-zH7"/>
+                    </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-BK-FGK">
+                    <rect key="frame" x="250" y="0.0" width="164" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdM-rL-ark">
+                            <rect key="frame" x="8" y="32" width="148" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3X-sG-cxO">
+                            <rect key="frame" x="8" y="44" width="148" height="0.0"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okP-n7-bOI">
+                            <rect key="frame" x="8" y="68" width="148" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3z-5K-FHj">
+                            <rect key="frame" x="8" y="80" width="148" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="okP-n7-bOI" firstAttribute="leading" secondItem="uD5-BK-FGK" secondAttribute="leading" constant="8" id="DPj-1o-AOV"/>
+                        <constraint firstItem="OdM-rL-ark" firstAttribute="top" secondItem="uD5-BK-FGK" secondAttribute="top" constant="32" id="EMA-hw-ZGU"/>
+                        <constraint firstAttribute="width" constant="164" id="GMg-xR-FFb"/>
+                        <constraint firstItem="okP-n7-bOI" firstAttribute="top" secondItem="Q3X-sG-cxO" secondAttribute="bottom" constant="24" id="GXJ-HU-5h7"/>
+                        <constraint firstItem="OdM-rL-ark" firstAttribute="leading" secondItem="uD5-BK-FGK" secondAttribute="leading" constant="8" id="JbC-Pe-Qi9"/>
+                        <constraint firstAttribute="trailing" secondItem="okP-n7-bOI" secondAttribute="trailing" constant="8" id="K33-na-m5X"/>
+                        <constraint firstAttribute="trailing" secondItem="v3z-5K-FHj" secondAttribute="trailing" constant="8" id="O9o-eY-QjJ"/>
+                        <constraint firstItem="Q3X-sG-cxO" firstAttribute="top" secondItem="OdM-rL-ark" secondAttribute="bottom" constant="12" id="SB8-m0-0is"/>
+                        <constraint firstItem="Q3X-sG-cxO" firstAttribute="leading" secondItem="uD5-BK-FGK" secondAttribute="leading" constant="8" id="byf-Db-dB3"/>
+                        <constraint firstItem="v3z-5K-FHj" firstAttribute="leading" secondItem="uD5-BK-FGK" secondAttribute="leading" constant="8" id="fgC-Qa-Lou"/>
+                        <constraint firstAttribute="trailing" secondItem="OdM-rL-ark" secondAttribute="trailing" constant="8" id="jaw-Xt-9Jw"/>
+                        <constraint firstAttribute="trailing" secondItem="Q3X-sG-cxO" secondAttribute="trailing" constant="8" id="k5a-3f-QV0"/>
+                        <constraint firstItem="v3z-5K-FHj" firstAttribute="top" secondItem="okP-n7-bOI" secondAttribute="bottom" constant="12" id="psk-Cw-pmC"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Iqb-9m-K42" secondAttribute="trailing" id="hGZ-Tn-69C"/>
+                <constraint firstAttribute="bottom" secondItem="uD5-BK-FGK" secondAttribute="bottom" id="F4r-7b-V4z"/>
+                <constraint firstAttribute="trailing" secondItem="uD5-BK-FGK" secondAttribute="trailing" id="FGQ-w0-mnZ"/>
+                <constraint firstItem="uD5-BK-FGK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jva-fK-xhy"/>
                 <constraint firstItem="Iqb-9m-K42" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nxW-UH-yVT"/>
+                <constraint firstItem="uD5-BK-FGK" firstAttribute="leading" secondItem="Iqb-9m-K42" secondAttribute="trailing" id="rSI-Ge-HxU"/>
                 <constraint firstItem="Iqb-9m-K42" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sXH-OR-UqK"/>
                 <constraint firstAttribute="bottom" secondItem="Iqb-9m-K42" secondAttribute="bottom" id="xJr-hP-u5k"/>
             </constraints>
@@ -29,9 +80,13 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="countOfPrices" destination="okP-n7-bOI" id="biE-0O-nCH"/>
+                <outlet property="followers" destination="v3z-5K-FHj" id="O4t-8F-xLl"/>
+                <outlet property="name" destination="OdM-rL-ark" id="Izn-AM-ggO"/>
+                <outlet property="price" destination="Q3X-sG-cxO" id="cNZ-Ys-gU4"/>
                 <outlet property="productImage" destination="Iqb-9m-K42" id="vDU-0b-2d1"/>
             </connections>
-            <point key="canvasLocation" x="139" y="102"/>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
         </view>
     </objects>
     <resources>
